@@ -1,0 +1,99 @@
+import java.applet.*;
+import java.awt.*;
+import java.util.ArrayList;
+public class groupAssignmentsApplet extends Applet{
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
+
+	public void paint (Graphics page){
+			ArrayList <String>  name = new ArrayList <String>();
+			String [] group1 = new String[5];
+			String [] group2 = new String[4];
+			String [] group3 = new String[4];
+			String [] group4 = new String[4];
+			String [] group5 = new String[4];
+			String [] group6 = new String[4];
+			// THis is how you add names, just place them inside the quotation marks - one per line
+			name.add("Johoan");
+			name.add("Peter");
+			name.add("Jessica");
+			name.add("Derek");
+			name.add("Jeremy");
+			name.add("Chadd");
+			name.add("Csaba");
+			name.add("Henry");
+			name.add("Louis");
+			name.add("Caleb");
+			name.add("Annabelle");
+			name.add("Messiah");
+			name.add("Storm");
+			name.add("Hassan");
+			name.add("Justin");
+			name.add("Collins");
+			name.add("Masco");
+			name.add("Eric");
+			name.add("Richard");
+			name.add("Andrew");
+			name.add("Elliot");
+			name.add("Michael");
+			name.add("Shannon");
+			name.add("Nick");
+			name.add("Sarah");
+			// Group1 is made here
+		for(int i = 0; i<group1.length; i++){
+			int x = (int)(Math.random()*name.size());
+			group1[i]= name.get(x);
+			name.remove(x);
+			}
+		
+		// Group 2 is made here
+		for (int i =0; i< group2.length; i++){
+			int x = (int)(Math.random()*name.size());
+			group2[i]= name.get(x);
+			name.remove(x);
+		}
+		// Group 3 is made here
+		for (int i =0; i< group3.length; i++){
+			int x = (int)(Math.random()*name.size());
+			group3[i]= name.get(x);
+			name.remove(x);
+		}
+		// Group 4 is made here
+		for (int i =0; i< group4.length; i++){
+			int x = (int)(Math.random()*name.size());
+			group4[i]= name.get(x);
+			name.remove(x);
+		}
+		//Group 5 is made here
+		for (int i =0; i< group5.length; i++){
+			int x = (int)(Math.random()*name.size());
+			group5[i]= name.get(x);
+			name.remove(x);
+		}
+		// Group 6 is made here
+		for (int i =0; i< group6.length; i++){
+			int x = (int)(Math.random()*name.size());
+			group6[i]= name.get(x);
+			name.remove(x);
+		}
+		// The Deadly Java GUI...
+	Font stringFont = new Font ("SanSeriff", Font.PLAIN, 25);
+	setBackground(Color.WHITE);
+	page.setColor(Color.BLACK);
+	page.setFont(stringFont);
+	page.drawString("Group 1 consists of: ", 40, 20);
+	page.drawString(group1[0]+ ", "+group1[1]+", "+ group1[2]+", "+ group1[3]+", "+ group1[4], 300, 20);
+	page.drawString("Group 2 consists of: ", 40, 80);
+	page.drawString(group2[0]+ ", "+group2[1]+", "+ group2[2]+", "+ group2[3], 300, 80);
+	page.drawString("Group 3 consists of: ", 40, 140);
+	page.drawString(group3[0]+ ", "+group3[1]+", "+ group3[2]+", "+ group3[3], 300, 140);
+	page.drawString("Group 4 consists of: ", 40, 200);
+	page.drawString(group4[0]+ ", "+group4[1]+", "+ group4[2]+", "+ group4[3], 300, 200);
+	page.drawString("Group 5 consists of: ", 40, 260);
+	page.drawString(group5[0]+ ", "+group5[1]+", "+ group5[2]+", "+ group5[3], 300, 260);
+	page.drawString("Group 6 consists of: ", 40, 320);
+	page.drawString(group6[0]+ ", "+group6[1]+", "+ group6[2]+", "+ group6[3], 300, 320);
+}
+}
